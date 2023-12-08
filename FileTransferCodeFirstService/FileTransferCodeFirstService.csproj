@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.Net.Client" Version="2.59.0" />
+    <PackageReference Include="protobuf-net.Grpc.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="protobuf-net.Grpc.AspNetCore.Reflection" Version="1.1.1" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="6.2.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.37.1" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FileTransferContracts\FileTransferContracts.csproj" />
+  </ItemGroup>
+
+</Project>

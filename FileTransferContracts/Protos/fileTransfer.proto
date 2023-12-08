@@ -1,0 +1,15 @@
+syntax = "proto3";
+package FileTransferContracts;
+
+message ChunkMsg {
+   string FileName = 1;
+   int64 FileSize = 2;
+   bytes Chunk = 3;
+   int32 ChunkSize = 4;
+}
+message FileRequest {
+   string FilePath = 1;
+}
+service FileTransferService {
+   rpc Subscribe (FileRequest) returns (stream ChunkMsg);
+}

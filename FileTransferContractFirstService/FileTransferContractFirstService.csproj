@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.Net.Client" Version="2.59.0" />
+    <PackageReference Include="protobuf-net.Grpc.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="Grpc.Tools" Version="2.37.1" PrivateAssets="All" />
+    <PackageReference Include="Google.Protobuf" Version="3.25.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\FileTransferContracts\Protos\fileTransfer.proto" GrpcServices="Server, Client" Link="Protos\fileTransfer.proto" />
+  </ItemGroup>
+  
+</Project>
